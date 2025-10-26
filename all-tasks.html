@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tasks - MyDay Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="home">
+        <aside>
+            <div class="title">
+                <h2>MyDay Web</h2>
+            </div>
+            <div class="pages">
+                <div class="pages-content">
+                    <i class="fa-solid fa-house"></i>
+                    <span><a href="index.html" style="text-decoration: none; color: black;">My Day</a></span>
+                </div>
+                <div class="pages-content">
+                    <i class="fa-regular fa-star"></i>
+                    <span><a href="important.html" style="text-decoration: none; color: black;">Important</a></span>
+                </div>
+                <div class="pages-content">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span><a href="planned.html" style="text-decoration: none; color: black;">Planned</a></span>
+                </div>
+                <div class="pages-content active">
+                    <i class="fa-solid fa-check-to-slot"></i>
+                    <span><a href="all-tasks.html" style="text-decoration: none; color: black;">All Tasks</a></span>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <div class="heading">
+                <div class="logo">
+                    <div class="icon" style="background: linear-gradient(135deg, #458cc2, #0b7bd2);">
+                        <i class="fa-solid fa-check-to-slot"></i>
+                    </div>
+                    <div class="content">
+                        <h1>All Tasks</h1>
+                        <p id="taskCount">0 total • 0 completed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs" style="margin: 30px 40px;">
+                <div class="filter-tab active" data-filter="all">All</div>
+                <div class="filter-tab" data-filter="Work">Work</div>
+                <div class="filter-tab" data-filter="Personal">Personal</div>
+            </div>
+            
+            <!-- Tasks Container -->
+            <div id="allTasksContainer" style="margin: 0 40px;"></div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

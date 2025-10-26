@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="home">
+        <aside>
+            <div class="title">
+                <h2>MyDay Web</h2>
+            </div>
+            <div class="pages">
+                <div class="pages-content active">
+                    <i class="fa-solid fa-house"></i>
+                    <span><a href="index.html" style="text-decoration: none; color: black;">My Day</a></span>
+                </div>
+                <div class="pages-content">
+                    <i class="fa-regular fa-star"></i>
+                    <span><a href="important.html" style="text-decoration: none; color: black;">Important</a></span>
+                </div>
+                <div class="pages-content">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span> <a href="planned.html" style="text-decoration: none; color: black;">Planned</a></span>
+                </div>
+                <div class="pages-content">
+                    <i class="fa-solid fa-check-to-slot"></i>
+                    <span><a href="all-tasks.html" style="text-decoration: none; color: black;">All Tasks</a></span>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <div class="heading">
+                <div class="logo">
+                    <div class="icon">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <div class="content">
+                        <h1>My Day</h1>
+                        <p id="currentDate"></p>
+                    </div>
+                </div>
+                <div class="add-btn">
+                    <button id="openBtn">
+                        <i class="fa-solid fa-plus"></i>
+                        Add Task
+                    </button>
+                </div>
+            </div>
+            
+            <div class="prog">
+                <label>Today's Progress</label>
+                <span class="progress-text" id="progressText">0 of 0 completed</span>
+                <progress id="task-done" value="0" max="100">0%</progress>
+            </div>
+            
+            <div class="card-task" id="todayTasks">
+                <!-- Tasks will be rendered here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close">&times;</span>
+            
+            <header>
+                <h2>Add New Task</h2>
+                <p>Create a new task with details like priority, tags, and due date</p>
+            </header>
+            
+            <form id="taskForm">
+                <div class="title">
+                    <h3>Title <sup style="color: red;">*</sup></h3>
+                    <input type="text" id="taskTitle" placeholder="What do you want to do?" required>
+                    <p>Press Enter to add, Shift+Enter to add and stay open</p>
+                </div>
+                
+                <div class="description">
+                    <h3>Description</h3>
+                    <textarea id="taskDesc" placeholder="Add more details..."></textarea>
+                </div>
+                
+                <div class="date">
+                    <h3>Due Date</h3>
+                    <input type="date" id="taskDate">
+                    <p>Pick a date or choose Today / Tomorrow</p>
+                </div>
+                <div class="category-select">
+                    <h3>Category</h3>
+                    <select id="taskCategory">
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                    </select>
+                        <p>Choose work or personal task</p>
+                </div>
+                <div class="priority">
+                    <h3>Priority</h3>
+                    <div class="priority-btns">
+                        <button type="button" class="priority-btn low" data-priority="low">Low</button>
+                        <button type="button" class="priority-btn medium active" data-priority="medium">Medium</button>
+                        <button type="button" class="priority-btn high" data-priority="high">High</button>
+                    </div>
+                </div>
+                
+                <div class="tags">
+                    <h3>Tags</h3>
+                    <input type="text" id="taskTags" placeholder="Add tags...">
+                    <p>Press Enter to add tag. Max 6 tags.</p>
+                </div>
+                
+                <div class="status">
+                    <h3>Status</h3>
+                    <select id="taskStatus">
+                        <option value="todo">To Do</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="done">Done</option>
+                    </select>
+                </div>
+                
+                <hr>
+                <div class="submit">
+                    <button type="submit" class="saveBtn" id="add">Add Task</button>
+                    <button type="button" class="cancel" id="cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

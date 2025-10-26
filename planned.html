@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planned - MyDay Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="home">
+        <aside>
+            <div class="title">
+                <h2>MyDay Web</h2>
+            </div>
+            <div class="pages">
+                <div class="pages-content">
+                    <i class="fa-solid fa-house"></i>
+                    <span><a href="index.html" style="text-decoration: none; color: black;">My Day</a></span>
+                </div>
+                <div class="pages-content">
+                    <i class="fa-regular fa-star"></i>
+                    <span><a href="important.html" style="text-decoration: none; color: black;">Important</a></span>
+                </div>
+                <div class="pages-content active">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span><a href="planned.html" style="text-decoration: none; color: black;">Planned</a></span>
+                </div>
+                <div class="pages-content">
+                    <i class="fa-solid fa-check-to-slot"></i>
+                    <span><a href="all-tasks.html" style="text-decoration: none; color: black;">All Tasks</a></span>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <div class="heading">
+                <div class="logo">
+                    <div class="icon" style="background: linear-gradient(135deg, #3b11b9, #1e2cc7);">
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                    <div class="content">
+                        <h1>Planned</h1>
+                        <p id="plannedCount">Tasks scheduled by date</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Planned Tasks Container -->
+            <div id="plannedContainer" style="margin: 40px;"></div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
